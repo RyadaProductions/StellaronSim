@@ -1,8 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellaronSim.Data", "StellaronSim.Data\StellaronSim.Data.csproj", "{AE97EC39-FCAD-4783-B1F4-164A102CF706}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33706.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StellaronSim.Data", "StellaronSim.Data\StellaronSim.Data.csproj", "{AE97EC39-FCAD-4783-B1F4-164A102CF706}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellaronSim.Data.Tests", "StellaronSim.Data.Tests\StellaronSim.Data.Tests.csproj", "{A17DF8F8-6BB2-435E-A30E-E12927CF7476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StellaronSim.Data.Tests", "StellaronSim.Data.Tests\StellaronSim.Data.Tests.csproj", "{A17DF8F8-6BB2-435E-A30E-E12927CF7476}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StellaronSim.ulatedUniverse", "StellaronSim.ulatedUniverse\StellaronSim.ulatedUniverse.csproj", "{AED62884-AE8C-4B13-8382-742904B9AF6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellaronSim.ulatedUniverse.Tests", "StellaronSim.ulatedUniverse.Tests\StellaronSim.ulatedUniverse.Tests.csproj", "{2CDE7814-5E4D-4C7B-A1A4-DF116C009A69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +25,19 @@ Global
 		{A17DF8F8-6BB2-435E-A30E-E12927CF7476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A17DF8F8-6BB2-435E-A30E-E12927CF7476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A17DF8F8-6BB2-435E-A30E-E12927CF7476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED62884-AE8C-4B13-8382-742904B9AF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED62884-AE8C-4B13-8382-742904B9AF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED62884-AE8C-4B13-8382-742904B9AF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED62884-AE8C-4B13-8382-742904B9AF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CDE7814-5E4D-4C7B-A1A4-DF116C009A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDE7814-5E4D-4C7B-A1A4-DF116C009A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CDE7814-5E4D-4C7B-A1A4-DF116C009A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDE7814-5E4D-4C7B-A1A4-DF116C009A69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7537839-34B7-4C7B-ADD6-13DDCCFC3874}
 	EndGlobalSection
 EndGlobal
