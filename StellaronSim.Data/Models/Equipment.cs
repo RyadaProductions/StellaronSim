@@ -21,7 +21,7 @@ public class Equipment
     public Archive ItemReferences { get; set; }
 
     [JsonPropertyName("levelData")]
-    public EquipmentLevelDatum[] LevelData { get; set; }
+    public EquipmentLevelData[] LevelData { get; set; }
 
     [JsonPropertyName("skill")]
     public EquipmentSkill Skill { get; set; }

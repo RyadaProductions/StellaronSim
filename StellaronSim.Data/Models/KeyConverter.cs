@@ -13,15 +13,15 @@ internal class KeyConverter : JsonConverter<Key>
         var value = reader.GetString();
         return value switch
         {
-            "<span style=\"color:#00FF9C;\">Wind</span> DMG Boost" => Key.SpanStyleColor00Ff9CWindSpanDmgBoost,
-            "<span style=\"color:#47C7FD;\">Ice</span> DMG Boost" => Key.SpanStyleColor47C7FdIceSpanDmgBoost,
-            "<span style=\"color:#7788ff;\">Quantum</span> DMG Boost" => Key.SpanStyleColor7788FfQuantumSpanDmgBoost,
+            "<span style=\"color:#00FF9C;\">Wind</span> DMG Boost" => Key.WindDmgBoost,
+            "<span style=\"color:#47C7FD;\">Ice</span> DMG Boost" => Key.IceDmgBoost,
+            "<span style=\"color:#7788ff;\">Quantum</span> DMG Boost" => Key.QuantumDmgBoost,
             "<span style=\"color:#F4D258;\">Imaginary</span> DMG Boost" =>
-                Key.SpanStyleColorF4D258ImaginarySpanDmgBoost,
-            "<span style=\"color:#F84F36;\">Fire</span> DMG Boost" => Key.SpanStyleColorF84F36FireSpanDmgBoost,
-            "<span style=\"color:#FFFFFF;\">Physical</span> DMG Boost" => Key.SpanStyleColorFfffffPhysicalSpanDmgBoost,
+                Key.ImaginaryDmgBoost,
+            "<span style=\"color:#F84F36;\">Fire</span> DMG Boost" => Key.FireDmgBoost,
+            "<span style=\"color:#FFFFFF;\">Physical</span> DMG Boost" => Key.PhysicalDmgBoost,
             "<span style=\"color:#c75de2;\">Lightning</span> DMG Boost" =>
-                Key.SpanStyleColorC75De2LightningSpanDmgBoost,
+                Key.LightningDmgBoost,
             "ATK" => Key.Atk,
             "Break Effect" => Key.BreakEffect,
             "CRIT DMG" => Key.CritDmg,
@@ -38,25 +38,25 @@ internal class KeyConverter : JsonConverter<Key>
     {
         switch (value)
         {
-            case Key.SpanStyleColor00Ff9CWindSpanDmgBoost:
+            case Key.WindDmgBoost:
                 JsonSerializer.Serialize(writer, "<span style=\"color:#00FF9C;\">Wind</span> DMG Boost", options);
                 return;
-            case Key.SpanStyleColor47C7FdIceSpanDmgBoost:
+            case Key.IceDmgBoost:
                 JsonSerializer.Serialize(writer, "<span style=\"color:#47C7FD;\">Ice</span> DMG Boost", options);
                 return;
-            case Key.SpanStyleColor7788FfQuantumSpanDmgBoost:
+            case Key.QuantumDmgBoost:
                 JsonSerializer.Serialize(writer, "<span style=\"color:#7788ff;\">Quantum</span> DMG Boost", options);
                 return;
-            case Key.SpanStyleColorF4D258ImaginarySpanDmgBoost:
+            case Key.ImaginaryDmgBoost:
                 JsonSerializer.Serialize(writer, "<span style=\"color:#F4D258;\">Imaginary</span> DMG Boost", options);
                 return;
-            case Key.SpanStyleColorF84F36FireSpanDmgBoost:
+            case Key.FireDmgBoost:
                 JsonSerializer.Serialize(writer, "<span style=\"color:#F84F36;\">Fire</span> DMG Boost", options);
                 return;
-            case Key.SpanStyleColorFfffffPhysicalSpanDmgBoost:
+            case Key.PhysicalDmgBoost:
                 JsonSerializer.Serialize(writer, "<span style=\"color:#FFFFFF;\">Physical</span> DMG Boost", options);
                 return;
-            case Key.SpanStyleColorC75De2LightningSpanDmgBoost:
+            case Key.LightningDmgBoost:
                 JsonSerializer.Serialize(writer, "<span style=\"color:#c75de2;\">Lightning</span> DMG Boost", options);
                 return;
             case Key.Atk:

@@ -11,11 +11,11 @@ public enum Key
     EffectHitRate,
     EffectRes,
     Hp,
-    SpanStyleColor00Ff9CWindSpanDmgBoost,
-    SpanStyleColor47C7FdIceSpanDmgBoost,
-    SpanStyleColor7788FfQuantumSpanDmgBoost,
-    SpanStyleColorC75De2LightningSpanDmgBoost,
-    SpanStyleColorF4D258ImaginarySpanDmgBoost,
-    SpanStyleColorF84F36FireSpanDmgBoost,
-    SpanStyleColorFfffffPhysicalSpanDmgBoost
+    WindDmgBoost,
+    IceDmgBoost,
+    QuantumDmgBoost,
+    LightningDmgBoost,
+    ImaginaryDmgBoost,
+    FireDmgBoost,
+    PhysicalDmgBoost
 };

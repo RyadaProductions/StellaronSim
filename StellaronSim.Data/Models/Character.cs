@@ -30,7 +30,7 @@ public class Character
     public Archive ItemReferences { get; set; }
 
     [JsonPropertyName("levelData")]
-    public CharacterLevelDatum[] LevelData { get; set; }
+    public CharacterLevelData[] LevelData { get; set; }
 
     [JsonPropertyName("ranks")]
     public object[] Ranks { get; set; }

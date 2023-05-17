@@ -15,9 +15,6 @@ internal static class Converter
             NameConverter.Singleton,
             KeyConverter.Singleton,
             PurposeConverter.Singleton,
-            new DateOnlyConverter(),
-            new TimeOnlyConverter(),
-            IsoDateTimeOffsetConverter.Singleton
         },
     };
 }

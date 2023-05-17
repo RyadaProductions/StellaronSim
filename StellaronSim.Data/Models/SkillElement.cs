@@ -24,7 +24,7 @@ public class SkillElement
     public long PromotionReq { get; set; }
 
     [JsonPropertyName("levelData")]
-    public SkillLevelDatum[] LevelData { get; set; }
+    public SkillLevelData[] LevelData { get; set; }
 
     [JsonPropertyName("ultimateCost")]
     public long UltimateCost { get; set; }

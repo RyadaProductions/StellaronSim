@@ -10,4 +10,10 @@
       <PackageReference Include="System.Text.Json" Version="8.0.0-preview.3.23174.8" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="main.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

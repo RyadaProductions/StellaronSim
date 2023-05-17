@@ -3,7 +3,7 @@
 namespace StellaronSim.Data.Models;
 
 #pragma warning disable CS8618, CS8601, CS8603
-public class CharacterLevelDatum
+public class EquipmentLevelData
 {
     [JsonPropertyName("promotion")]
     public long Promotion { get; set; }
@@ -31,19 +31,4 @@ public class CharacterLevelDatum
 
     [JsonPropertyName("defenseAdd")]
     public double DefenseAdd { get; set; }
-
-    [JsonPropertyName("crate")]
-    public double Crate { get; set; }
-
-    [JsonPropertyName("cdmg")]
-    public double Cdmg { get; set; }
-
-    [JsonPropertyName("aggro")]
-    public long Aggro { get; set; }
-
-    [JsonPropertyName("speedBase")]
-    public long SpeedBase { get; set; }
-
-    [JsonPropertyName("speedAdd")]
-    public long SpeedAdd { get; set; }
 }
