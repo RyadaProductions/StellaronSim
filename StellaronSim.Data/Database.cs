@@ -30,7 +30,6 @@ public class Database
         var levelData = character.LevelData
             .Where(x => x.MaxLevel > level)
             .MinBy(x => x.MaxLevel);
-        if (levelData is null) return new CharacterStats();
         
         return new CharacterStats()
         {
