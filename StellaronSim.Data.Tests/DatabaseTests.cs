@@ -63,4 +63,14 @@ public class Tests
             Assert.That(stats.Aggro, Is.EqualTo(expectedAggro));
         });
     }
+
+    [TestCase(-100)]
+    [TestCase(0)]
+    [TestCase(81)]
+    public void GetStatsAtLevelThrowsOnInvalidLevel(int level)
+    {
+        var database = new Database(_json);
+        var exception = Assert.Throws<ArgumentOutOfRangeException>(() => database.GetStatsAtLevel("hook", level));
+        Assert.That(exception.ParamName == "level");
+    }
 }
