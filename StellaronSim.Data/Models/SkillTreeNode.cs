@@ -17,6 +17,4 @@ public class SkillTreeNode
     public IReadOnlyDictionary<int, double[]> ParametersByLevel { get; init; }
     
     public IReadOnlyDictionary<BuffEffect, double> StatusList { get; init; }
-
-    public int UltimateCost { get; init; }
 }

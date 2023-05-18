@@ -8,7 +8,9 @@ public class CharacterBase
     
     public Element DamageType { get; init; }
     
-    public IReadOnlyDictionary<AbilityType, Skill> Skills { get; init; }
+    public IReadOnlyCollection<Skill> Skills { get; init; }
     
     public SkillTree SkillTree { get; init; }
+    
+    public int UltimateCost { get; init; }
 }

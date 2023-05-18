@@ -17,11 +17,22 @@ public class Tests
         Assert.That(database, Is.Not.Null);
     }
 
-    [Test]
-    public void CharacterDataExists()
+    [TestCase("seele")]
+    [TestCase("kafka")]
+    public void CharacterDataExists(string characterName)
     {
         var database = new Database(_json);
-        Assert.That(database.GetCharacter("seele"), Is.Not.Null);
+        Assert.That(database.GetCharacter(characterName), Is.Not.Null);
+    }
+
+    [TestCase("seele", 120)]
+    [TestCase("danheng", 100)]
+    [TestCase("playergirl2", 120)]
+    public void CharacterContainsUltimateCostValue(string characterName, int ultimateCost)
+    {
+        var database = new Database(_json);
+        var characterData = database.GetCharacter(characterName);
+        Assert.That(characterData.UltimateCost, Is.EqualTo(ultimateCost));
     }
 
     [Test]
