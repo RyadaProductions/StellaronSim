@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace StellaronSim.Data.Models.Generated;
 
 #pragma warning disable CS8618, CS8601, CS8603
-public class CalculatorConfig
+internal class CalculatorConfig
 {
     [JsonPropertyName("characters")]
     public Dictionary<string, Character> Characters { get; set; }

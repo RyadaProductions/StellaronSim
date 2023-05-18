@@ -3,7 +3,7 @@
 namespace StellaronSim.Data.Models.Generated;
 
 #pragma warning disable CS8618, CS8601, CS8603
-public class SkillLevelData
+internal class SkillLevelData
 {
     [JsonPropertyName("level")]
     public long Level { get; set; }

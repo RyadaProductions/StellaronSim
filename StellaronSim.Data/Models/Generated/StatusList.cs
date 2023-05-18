@@ -3,7 +3,7 @@
 namespace StellaronSim.Data.Models.Generated;
 
 #pragma warning disable CS8618, CS8601, CS8603
-public class StatusList
+internal class StatusList
 {
     [JsonPropertyName("key")]
     public Key Key { get; set; }

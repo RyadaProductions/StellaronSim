@@ -1,7 +1,7 @@
 ﻿namespace StellaronSim.Data.Models.Generated;
 
 #pragma warning disable CS8618, CS8601, CS8603
-public enum IconPath
+internal enum IconPath
 {
     A493793D3B77E04Dfb9B717F664A7D46C36A9A8A043Dedf7049A10A628Eebd8E, 
     B10A43943E57Ac6452D5A3A6D13A98D314Da19Edcff2Fe7De6E53Bc2D55A6894, 

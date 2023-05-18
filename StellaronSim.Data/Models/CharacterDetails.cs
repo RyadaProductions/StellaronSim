@@ -4,19 +4,19 @@ namespace StellaronSim.Data.Models;
 
 public class CharacterDetails
 {
-    public string Name { get; set; }
+    public string Name { get; init; }
     
-    public int Rarity { get; set; }
+    public int Rarity { get; init; }
     
-    public Element DamageType { get; set; }
+    public Element DamageType { get; init; }
     
-    public IReadOnlyCollection<CharacterStats> BaseStats { get; set; }
+    public IReadOnlyCollection<CharacterStats> BaseStats { get; init; }
     
-    public IReadOnlyCollection<CharacterStats> PerLevelStats { get; set; }
+    public IReadOnlyCollection<CharacterStats> PerLevelStats { get; init; }
     
     // GeneratedType
-    public SkillElement[] Skills { get; set; }
+    internal SkillElement[] Skills { get; init; }
     
     // Generated type
-    public SkillTreePoint[] SkillTreePoints { get; set; }
+    internal SkillTreePoint[] SkillTreePoints { get; init; }
 }

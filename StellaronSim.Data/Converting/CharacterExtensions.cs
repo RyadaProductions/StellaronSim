@@ -6,10 +6,10 @@ using StellaronSim.Data.Models.Generated;
 
 namespace StellaronSim.Data.Converting;
 
-public static class CharacterExtensions
+internal static class CharacterExtensions
 {
     [Pure]
-    public static CharacterDetails ToCharacterDetails(this Character character)
+    internal static CharacterDetails ToCharacterDetails(this Character character)
     {
         IList<CharacterStats> baseStats = new List<CharacterStats>();
         IList<CharacterStats> growthStats = new List<CharacterStats>();

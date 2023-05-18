@@ -4,10 +4,10 @@ using StellaronSim.Data.Models.Generated;
 
 namespace StellaronSim.Data.Converting;
 
-public static class CharacterLevelDataExtensions
+internal static class CharacterLevelDataExtensions
 {
     [Pure]
-    public static CharacterStats ToBaseCharacterStats(this CharacterLevelData levelData)
+    internal static CharacterStats ToBaseCharacterStats(this CharacterLevelData levelData)
     {
         return new CharacterStats
         {
@@ -23,7 +23,7 @@ public static class CharacterLevelDataExtensions
     }
     
     [Pure]
-    public static CharacterStats ToGrowthCharacterStats(this CharacterLevelData levelData)
+    internal static CharacterStats ToGrowthCharacterStats(this CharacterLevelData levelData)
     {
         return new CharacterStats
         {
@@ -39,7 +39,7 @@ public static class CharacterLevelDataExtensions
     }
     
     [Pure]
-    public static CharacterStats ToCharacterStatsAtLevel(this CharacterLevelData levelData, int level)
+    internal static CharacterStats ToCharacterStatsAtLevel(this CharacterLevelData levelData, int level)
     {
         return new CharacterStats
         {
