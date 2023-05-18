@@ -1,4 +1,5 @@
-﻿using StellaronSim.Data.Converting;
+﻿using System.Data;
+using StellaronSim.Data.Converting;
 using StellaronSim.Data.Models;
 using StellaronSim.Data.Models.Generated;
 
@@ -38,7 +39,10 @@ public class Database
         var levelData = character.LevelData
             .Where(x => x.MaxLevel > level)
             .MinBy(x => x.MaxLevel);
-
+        
+        if (levelData is null)
+            throw new DataException("Can't find data for specified level in levelData. Data might be corrupt");
+        
         return levelData.ToCharacterStatsAtLevel(level);
     }
 }

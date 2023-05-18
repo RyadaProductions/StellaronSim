@@ -71,6 +71,6 @@ public class Tests
     {
         var database = new Database(_json);
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() => database.GetStatsAtLevel("hook", level));
-        Assert.That(exception.ParamName == "level");
+        Assert.That(exception.ParamName, Is.EqualTo("level"));
     }
 }

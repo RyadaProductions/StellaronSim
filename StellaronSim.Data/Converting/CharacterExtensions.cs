@@ -25,8 +25,8 @@ internal static class CharacterExtensions
             Rarity = character.Rarity.ToInt(),
             DamageType = character.DamageType.ToElement(),
             Skills = character.Skills.ToDictionary(x => x.ToSkill().ability, x => x.ToSkill()),
-            BaseStats = new ReadOnlyCollection<CharacterStats>(baseStats),
-            PerLevelStats = new ReadOnlyCollection<CharacterStats>(growthStats),
+            BaseStats = baseStats.AsReadOnly(),
+            PerLevelStats = growthStats.AsReadOnly(),
             SkillTree = character.SkillTreePoints.ToSkillTree(),
         };
     }

@@ -23,7 +23,7 @@ internal static class SkillTreePointExtensions
         foreach (var skillTreePoint in skillTreePoints)
         {
             var type = skillTreePoint.Type;
-            if (type == 1)
+            if (type is 1)
             {
                 var skillTreeNode = skillTreePoint.EmbedBonusSkill.ToSkillTreeNode();
                 skillTreeNode.ChildNodes = skillTreePoint.Children.ToSkillTreeNodes();
