@@ -1,10 +1,12 @@
-﻿using StellaronSim.Data.Models;
+﻿using System.Diagnostics.Contracts;
+using StellaronSim.Data.Models;
 using StellaronSim.Data.Models.Generated;
 
 namespace StellaronSim.Data.Converting;
 
 internal static class SkillTreePointExtensions
 {
+    [Pure]
     internal static SkillTree ToSkillTree(this SkillTreePoint[] skillTreePoints)
     {
         return new SkillTree
@@ -13,7 +15,8 @@ internal static class SkillTreePointExtensions
         };
     }
 
-    private static IReadOnlyList<SkillTreeNode> ToSkillTreeNodes(this SkillTreePoint[] skillTreePoints)
+    [Pure]
+    private static IReadOnlyList<SkillTreeNode> ToSkillTreeNodes(this IEnumerable<SkillTreePoint> skillTreePoints)
     {
         IList<SkillTreeNode> nodes = new List<SkillTreeNode>();
 

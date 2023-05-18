@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.Data;
 using System.Diagnostics.Contracts;
 using StellaronSim.Data.Models;
 using StellaronSim.Data.Models.Generated;
@@ -23,12 +22,12 @@ internal static class CharacterExtensions
         return new CharacterDetails
         {
             Name = character.Name,
-            Rarity = Convert.ToInt32(character.Rarity),
+            Rarity = character.Rarity.ToInt(),
             DamageType = character.DamageType.ToElement(),
             Skills = character.Skills.ToDictionary(x => x.ToSkill().ability, x => x.ToSkill()),
             BaseStats = new ReadOnlyCollection<CharacterStats>(baseStats),
             PerLevelStats = new ReadOnlyCollection<CharacterStats>(growthStats),
-            SkillTree = character.SkillTreePoints.ToSkillTree()
+            SkillTree = character.SkillTreePoints.ToSkillTree(),
         };
     }
 }

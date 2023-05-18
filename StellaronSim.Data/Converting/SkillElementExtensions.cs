@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Diagnostics.Contracts;
+﻿using System.Diagnostics.Contracts;
 using StellaronSim.Data.Models;
 using StellaronSim.Data.Models.Generated;
 
@@ -27,11 +26,9 @@ internal static class SkillElementExtensions
             Name = skillElement.Name,
             Type = SkillTreeNodeType.Skill,
             Description = skillElement.DescHash,
-            AbilityType = skillElement.TypeDescHash.ToAbilityType(),
-            LevelRequirement = Convert.ToInt32(skillElement.LevelReq),
-            PromotionRequirement = Convert.ToInt32(skillElement.PromotionReq),
-            UltimateCost = Convert.ToInt32(skillElement.UltimateCost),
-            SkillType = skillElement.TagHash.ToSkillType()
+            LevelRequirement = skillElement.LevelReq.ToInt(),
+            PromotionRequirement = skillElement.PromotionReq.ToInt(),
+            UltimateCost = skillElement.UltimateCost.ToInt()
         };
     }
 }

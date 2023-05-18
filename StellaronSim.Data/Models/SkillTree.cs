@@ -7,25 +7,21 @@ public class SkillTree
 
 public class SkillTreeNode
 {
-    public SkillTreeNodeType Type { get; set; }
+    public SkillTreeNodeType Type { get; init; }
     
-    public IReadOnlyList<SkillTreeNode> ChildNodes { get; set; }
+    public IReadOnlyList<SkillTreeNode> ChildNodes { get; internal set; }
     
-    public string Name { get; set; }
+    public string Name { get; init; }
     
-    public string Description { get; set; }
+    public string Description { get; init; }
     
-    public int LevelRequirement { get; set; }
+    public int LevelRequirement { get; init; }
     
-    public int PromotionRequirement { get; set; }
+    public int PromotionRequirement { get; init; }
     
-    public IReadOnlyDictionary<int, double[]> ParametersByLevel { get; set; }
+    public IReadOnlyDictionary<int, double[]> ParametersByLevel { get; init; }
     
-    public IReadOnlyDictionary<BuffEffect, double> StatusList { get; set; }
+    public IReadOnlyDictionary<BuffEffect, double> StatusList { get; init; }
 
-    public int UltimateCost { get; set; }
-    
-    public SkillType SkillType { get; set; }
-    
-    public AbilityType AbilityType { get; set; }
+    public int UltimateCost { get; init; }
 }

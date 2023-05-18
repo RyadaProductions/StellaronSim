@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Diagnostics.Contracts;
+﻿using System.Diagnostics.Contracts;
 using StellaronSim.Data.Models;
 using StellaronSim.Data.Models.Generated;
 
@@ -14,8 +13,8 @@ internal static class EmbedBuffExtensions
         {
             Name = skillElement.Name.ToString(),
             Type = SkillTreeNodeType.Buff,
-            LevelRequirement = Convert.ToInt32(skillElement.LevelReq),
-            PromotionRequirement = Convert.ToInt32(skillElement.PromotionReq),
+            LevelRequirement = skillElement.LevelReq.ToInt(),
+            PromotionRequirement = skillElement.PromotionReq.ToInt(),
             StatusList = skillElement.StatusList.ToDictionary(x=> x.Key.ToBuffEffect(), x=>x.Value)
         };
     }
