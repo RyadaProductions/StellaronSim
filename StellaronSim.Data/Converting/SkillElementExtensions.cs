@@ -27,7 +27,8 @@ internal static class SkillElementExtensions
             Type = SkillTreeNodeType.Skill,
             Description = skillElement.DescHash,
             LevelRequirement = skillElement.LevelReq.ToInt(),
-            PromotionRequirement = skillElement.PromotionReq.ToInt()
+            PromotionRequirement = skillElement.PromotionReq.ToInt(),
+            ParametersByLevel = skillElement.LevelData.ToDictionary(x => x.Level.ToInt(), x => x.Params)
         };
     }
 }
