@@ -10,8 +10,7 @@ public class CharacterBase
     
     public Element DamageType { get; init; }
     
-    public IEnumerable<Skill> Skills { get; init; }
+    public IReadOnlyDictionary<AbilityType, Skill> Skills { get; init; }
     
-    // Generated type
-    internal SkillTreePoint[] SkillTreePoints { get; init; }
+    public SkillTree SkillTree { get; init; }
 }
