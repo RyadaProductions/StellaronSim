@@ -11,7 +11,7 @@ internal static class TypeDescHashExtensions
     internal static AbilityType ToAbilityType(this TypeDescHash? typeDescHash)
     {
         if (!Enum.TryParse(typeDescHash.ToString(), out AbilityType abilityType))
-            throw new DataException($"Database is either corrupted or contains non existing/new element. Element name: {typeDescHash}");
+            return AbilityType.Empty;
 
         return abilityType;
     }
